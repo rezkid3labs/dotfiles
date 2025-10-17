@@ -1,5 +1,5 @@
 theme = "dracula"
-client_id = "c97efb0ba96645339c0ce593531dc3b6"
+client_id = "344cb0b7c14f4dcc8f3787a5e2dfab55"
 client_port = 8080
 login_redirect_uri = "http://127.0.0.1:8989/login"
 playback_format = """
@@ -42,7 +42,7 @@ album_percent = 40
 [device]
 name = "MacD3Labs"
 device_type = "speaker"
-volume = 85 
+volume = 85
 bitrate = 320
 audio_cache = false
 normalization = false

@@ -1,8 +1,9 @@
 [window]
 padding.x = 16
 padding.y = 14
-decorations = "none" # Removes the window decoration (title bar, etc.)
+decorations = "none"   # Removes the window decoration (title bar, etc.)
 option_as_alt = "Both"
+opacity = 0.90
 [font]
 size = 13
 
