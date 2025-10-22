@@ -28,7 +28,18 @@ return {
       -- Get a random quote
       math.randomseed(os.time())
       local random_quote = quotes[math.random(#quotes)]
-
+      -- Split quote into 2 lines if it's too long
+      local max_length = 100
+      local formatted_quote = random_quote
+      if #random_quote > max_length then
+        local split_pos = random_quote:sub(1, max_length):match("^.*()%s")
+        if split_pos then
+          formatted_quote = random_quote:sub(1, split_pos - 1)
+            .. "\n"
+            .. string.rep(" ", 15)
+            .. random_quote:sub(split_pos + 1)
+        end
+      end
       local logo = [[
 ██████╗ ███████╗███╗   ██╗    ██████╗ ███████╗██╗   ██╗
 ██╔══██╗██╔════╝████╗  ██║    ██╔══██╗██╔════╝██║   ██║
@@ -41,7 +52,7 @@ return {
       opts.dashboard = {
         enabled = true,
         preset = {
-          header = logo .. "\n\n" .. random_quote,
+          header = logo .. "\n\n" .. formatted_quote,
           keys = {
             { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
             { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
