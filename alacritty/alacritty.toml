@@ -3,54 +3,122 @@ padding.x = 16
 padding.y = 14
 decorations = "none"   # Removes the window decoration (title bar, etc.)
 option_as_alt = "Both"
-opacity = 0.90
+opacity = 1
+
 [font]
 size = 13
 
-# FiraCode Nerd Font
+# JetBrains Mono
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
 bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
 italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
 
 # One Dark theme
 [colors]
+# [colors.primary]
+# background = '0x1e2127'
+# foreground = '0xabb2bf'
+# bright_foreground = '0xe6efff'
+#
+# # Normal colors
+# [colors.normal]
+# black = '0x1e2127'
+# red = '0xe06c75'
+# green = '0x98c379'
+# yellow = '0xd19a66'
+# blue = '0x61afef'
+# magenta = '0xc678dd'
+# cyan = '0x56b6c2'
+# white = '0x828791'
+#
+# # Bright colors
+# [colors.bright]
+# black = '0x5c6370'
+# red = '0xe06c75'
+# green = '0x98c379'
+# yellow = '0xd19a66'
+# blue = '0x61afef'
+# magenta = '0xc678dd'
+# cyan = '0x56b6c2'
+# white = '0xe6efff'
+#
+# # Dim colors
+# [colors.dim]
+# black = '0x1e2127'
+# red = '0xe06c75'
+# green = '0x98c379'
+# yellow = '0xd19a66'
+# blue = '0x61afef'
+# magenta = '0xc678dd'
+# cyan = '0x56b6c2'
+# white = '0x828791'
 [colors.primary]
-background = '0x1e2127'
-foreground = '0xabb2bf'
-bright_foreground = '0xe6efff'
+background = '#232A2E'
+foreground = '#D3C6AA'
 
-# Normal colors
+[colors.cursor]
+text = '#232A2E'
+cursor = '#D3C6AA'
+
+[colors.vi_mode_cursor]
+text = '#232A2E'
+cursor = '#E69875'
+
+[colors.selection]
+text = '#D3C6AA'
+background = '#475258'
+
+[colors.search.matches]
+foreground = '#232A2E'
+background = '#DBBC7F'
+
+[colors.search.focused_match]
+foreground = '#232A2E'
+background = '#A7C080'
+
 [colors.normal]
-black = '0x1e2127'
-red = '0xe06c75'
-green = '0x98c379'
-yellow = '0xd19a66'
-blue = '0x61afef'
-magenta = '0xc678dd'
-cyan = '0x56b6c2'
-white = '0x828791'
+black = '#7A8478'
+red = '#E67E80'
+green = '#A7C080'
+yellow = '#DBBC7F'
+blue = '#7FBBB3'
+magenta = '#D699B6'
+cyan = '#83C092'
+white = '#D3C6AA'
 
-# Bright colors
 [colors.bright]
-black = '0x5c6370'
-red = '0xe06c75'
-green = '0x98c379'
-yellow = '0xd19a66'
-blue = '0x61afef'
-magenta = '0xc678dd'
-cyan = '0x56b6c2'
-white = '0xe6efff'
+black = '#859289'
+red = '#E67E80'
+green = '#A7C080'
+yellow = '#DBBC7F'
+blue = '#7FBBB3'
+magenta = '#D699B6'
+cyan = '#83C092'
+white = '#D3C6AA'
 
-# Dim colors
 [colors.dim]
-black = '0x1e2127'
-red = '0xe06c75'
-green = '0x98c379'
-yellow = '0xd19a66'
-blue = '0x61afef'
-magenta = '0xc678dd'
-cyan = '0x56b6c2'
-white = '0x828791'
+black = '#2D353B'
+red = '#514045'
+green = '#425047'
+yellow = '#4D4C43'
+blue = '#3A515D'
+magenta = '#4A444E'
+cyan = '#543A48'
+white = '#9DA9A0'
 
-[terminal.shell]
-program = "/opt/homebrew/bin/zellij"
+[[colors.indexed_colors]]
+index = 16
+color = '#E69875'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#514045'
+
+# [terminal.shell]
+# program = "/bin/zsh"
+# args = ["-l", "-c", "zellij"]
+
+[env]
+TERM = "xterm-256color"
+COLORTERM = "truecolor"
+builtin_box_drawing = "true"
