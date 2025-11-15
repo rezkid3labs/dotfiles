@@ -114,10 +114,6 @@ color = '#E69875'
 index = 17
 color = '#514045'
 
-# [terminal.shell]
-# program = "/bin/zsh"
-# args = ["-l", "-c", "zellij"]
-
 [env]
 TERM = "xterm-256color"
 COLORTERM = "truecolor"
